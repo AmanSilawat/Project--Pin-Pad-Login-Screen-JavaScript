@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Login</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="pin-login/style.css">
+</head>
+<body>
+    <h1>Pin Login</h1>
+    <div class="pin-login" id="mainPinLogin">
+        <input type="password" readonly class="pin-login__text">
+        <div class="pin-login__numpad">
+            <!-- JavaScript Working Area ;) -->
+        </div>
+
+    </div>
+    <script src="pin-login/app.js"></script>
+    <script>
+        new PinLogin({
+            el: document.getElementById('mainPinLogin'),
+            loginEndpoint: 'login.php',
+            redirectTo: 'dashboard.html', 
+            maxNumbers: 4
+        });
+    </script>
+</body>
+</html>
